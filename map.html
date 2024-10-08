@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ed9497ad4730f15cc9041ae7ced9c8be {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ed9497ad4730f15cc9041ae7ced9c8be" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ed9497ad4730f15cc9041ae7ced9c8be = L.map(
+                "map_ed9497ad4730f15cc9041ae7ced9c8be",
+                {
+                    center: [48.90808780293388, 2.3665120103670043],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7c6e00299195ef7321baf09254274a9f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_7c6e00299195ef7321baf09254274a9f.addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+            var marker_a3ca15c0cac36bb7acf9b61e72a6f296 = L.marker(
+                [48.90680713698062, 2.364541214992642],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_d2cacb3cb8397c9088e2b5b06ae125bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9de43a389a9c225b1cfde59db86a9daf = $(`<div id="html_9de43a389a9c225b1cfde59db86a9daf" style="width: 100.0%; height: 100.0%;">Place du Front Populaire - George Sand</div>`)[0];
+                popup_d2cacb3cb8397c9088e2b5b06ae125bd.setContent(html_9de43a389a9c225b1cfde59db86a9daf);
+            
+        
+
+        marker_a3ca15c0cac36bb7acf9b61e72a6f296.bindPopup(popup_d2cacb3cb8397c9088e2b5b06ae125bd)
+        ;
+
+        
+    
+    
+            var marker_07259a28ec5b9bd1d08cf0d22d0fa39c = L.marker(
+                [48.91105960199651, 2.3676301538944244],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_ee51c20e675d75da8b34878bac7982cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ea9e6551e6f717cc172d6cedc4323658 = $(`<div id="html_ea9e6551e6f717cc172d6cedc4323658" style="width: 100.0%; height: 100.0%;">Waldeck Rochet - Germaine Tillon</div>`)[0];
+                popup_ee51c20e675d75da8b34878bac7982cf.setContent(html_ea9e6551e6f717cc172d6cedc4323658);
+            
+        
+
+        marker_07259a28ec5b9bd1d08cf0d22d0fa39c.bindPopup(popup_ee51c20e675d75da8b34878bac7982cf)
+        ;
+
+        
+    
+    
+            var marker_d324ae7183c5b5ecc50d2b75096bc2c2 = L.marker(
+                [48.903281401126755, 2.368072383105755],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_a020c02ff83382b8d094201ef2ef0868 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21f7e966293d43309fecacc82aab9d7b = $(`<div id="html_21f7e966293d43309fecacc82aab9d7b" style="width: 100.0%; height: 100.0%;">Victor Hugo - Magasins Généraux</div>`)[0];
+                popup_a020c02ff83382b8d094201ef2ef0868.setContent(html_21f7e966293d43309fecacc82aab9d7b);
+            
+        
+
+        marker_d324ae7183c5b5ecc50d2b75096bc2c2.bindPopup(popup_a020c02ff83382b8d094201ef2ef0868)
+        ;
+
+        
+    
+    
+            var marker_3dd0d6a58458e2342e1f2805d47b7c17 = L.marker(
+                [48.909423010092326, 2.358443588018418],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_5a24ec422327483d17ef1d0cf02435bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c549f984c870d8e81484d1ca5aafc8d8 = $(`<div id="html_c549f984c870d8e81484d1ca5aafc8d8" style="width: 100.0%; height: 100.0%;">Wilson - Métallurgie</div>`)[0];
+                popup_5a24ec422327483d17ef1d0cf02435bd.setContent(html_c549f984c870d8e81484d1ca5aafc8d8);
+            
+        
+
+        marker_3dd0d6a58458e2342e1f2805d47b7c17.bindPopup(popup_5a24ec422327483d17ef1d0cf02435bd)
+        ;
+
+        
+    
+    
+            var marker_b042991111c3b9ed58ff6b2fa64b0c09 = L.marker(
+                [48.906442763495, 2.3584905266762],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_3a016e897dc93530a198e88e223c76dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_912f0ff4b37ff33adee27870d31a9008 = $(`<div id="html_912f0ff4b37ff33adee27870d31a9008" style="width: 100.0%; height: 100.0%;">Proudhon - Président Wilson</div>`)[0];
+                popup_3a016e897dc93530a198e88e223c76dc.setContent(html_912f0ff4b37ff33adee27870d31a9008);
+            
+        
+
+        marker_b042991111c3b9ed58ff6b2fa64b0c09.bindPopup(popup_3a016e897dc93530a198e88e223c76dc)
+        ;
+
+        
+    
+    
+            var marker_6a5c192bf21428ed9b0bf26dbb01e86d = L.marker(
+                [48.902519074064, 2.3740895837545],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_fa81ba26b96feec7b7db5dd47aeaeb11 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_41b6310ec8e5d02313f09f4d52668db2 = $(`<div id="html_41b6310ec8e5d02313f09f4d52668db2" style="width: 100.0%; height: 100.0%;">Madeleine Vionnet</div>`)[0];
+                popup_fa81ba26b96feec7b7db5dd47aeaeb11.setContent(html_41b6310ec8e5d02313f09f4d52668db2);
+            
+        
+
+        marker_6a5c192bf21428ed9b0bf26dbb01e86d.bindPopup(popup_fa81ba26b96feec7b7db5dd47aeaeb11)
+        ;
+
+        
+    
+    
+            var marker_0c894ea068462c5b698b23a6f836a246 = L.marker(
+                [48.898748039775, 2.3645754531026],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_f49e936525585116b4fa590a64825d50 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e873db9e10c9d705a8d3cc37f019f9c7 = $(`<div id="html_e873db9e10c9d705a8d3cc37f019f9c7" style="width: 100.0%; height: 100.0%;">Station Paris Basketball - Ney - Charles Hermite</div>`)[0];
+                popup_f49e936525585116b4fa590a64825d50.setContent(html_e873db9e10c9d705a8d3cc37f019f9c7);
+            
+        
+
+        marker_0c894ea068462c5b698b23a6f836a246.bindPopup(popup_f49e936525585116b4fa590a64825d50)
+        ;
+
+        
+    
+    
+            var marker_05ccee8d4bcc885f664073c490920b0f = L.marker(
+                [48.89859661942376, 2.3689722642302513],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_250c713641ad0ef48f4f70ae4eef4ef7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13761e04afaed9e058a8100684083607 = $(`<div id="html_13761e04afaed9e058a8100684083607" style="width: 100.0%; height: 100.0%;">Porte d'Aubervilliers</div>`)[0];
+                popup_250c713641ad0ef48f4f70ae4eef4ef7.setContent(html_13761e04afaed9e058a8100684083607);
+            
+        
+
+        marker_05ccee8d4bcc885f664073c490920b0f.bindPopup(popup_250c713641ad0ef48f4f70ae4eef4ef7)
+        ;
+
+        
+    
+    
+            var marker_08a79a525eb9d5770746cf3af405319d = L.marker(
+                [48.91516726221354, 2.357633225619793],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_97e66299e60e9fd32cb507a36ede956f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ccaee3ab0eb31c7f07b39732d0685aa = $(`<div id="html_7ccaee3ab0eb31c7f07b39732d0685aa" style="width: 100.0%; height: 100.0%;">Wilson - Landy</div>`)[0];
+                popup_97e66299e60e9fd32cb507a36ede956f.setContent(html_7ccaee3ab0eb31c7f07b39732d0685aa);
+            
+        
+
+        marker_08a79a525eb9d5770746cf3af405319d.bindPopup(popup_97e66299e60e9fd32cb507a36ede956f)
+        ;
+
+        
+    
+    
+            var marker_2d0d73fa8382cd076d7349bb04fdc522 = L.marker(
+                [48.91509653452032, 2.375951372087002],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_cfde2783f17b3affdceca54d96c2568d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e13b587a92d5e27f428810925486231 = $(`<div id="html_2e13b587a92d5e27f428810925486231" style="width: 100.0%; height: 100.0%;">Landy - Heurtault</div>`)[0];
+                popup_cfde2783f17b3affdceca54d96c2568d.setContent(html_2e13b587a92d5e27f428810925486231);
+            
+        
+
+        marker_2d0d73fa8382cd076d7349bb04fdc522.bindPopup(popup_cfde2783f17b3affdceca54d96c2568d)
+        ;
+
+        
+    
+    
+            var marker_8a2b36a93f60d14073585195380a8d14 = L.marker(
+                [48.919141953558, 2.3620655760169],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_45462a02649903abc5616573a3737fa5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4cf0bf5fef26588bb6b92414df9f5140 = $(`<div id="html_4cf0bf5fef26588bb6b92414df9f5140" style="width: 100.0%; height: 100.0%;">Stade de France - Francis de Pressensé</div>`)[0];
+                popup_45462a02649903abc5616573a3737fa5.setContent(html_4cf0bf5fef26588bb6b92414df9f5140);
+            
+        
+
+        marker_8a2b36a93f60d14073585195380a8d14.bindPopup(popup_45462a02649903abc5616573a3737fa5)
+        ;
+
+        
+    
+    
+            var marker_afb5e60e6ad027b8defd7b3d6f5fb4c3 = L.marker(
+                [48.91844993053703, 2.3727085813879967],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_5aafbc61ffe571a0ea874074b4707c3a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e65f44ca357e269f5ad15cc9ab59f3d7 = $(`<div id="html_e65f44ca357e269f5ad15cc9ab59f3d7" style="width: 100.0%; height: 100.0%;">Parc Eli Lotar</div>`)[0];
+                popup_5aafbc61ffe571a0ea874074b4707c3a.setContent(html_e65f44ca357e269f5ad15cc9ab59f3d7);
+            
+        
+
+        marker_afb5e60e6ad027b8defd7b3d6f5fb4c3.bindPopup(popup_5aafbc61ffe571a0ea874074b4707c3a)
+        ;
+
+        
+    
+    
+            var marker_97dd0693c89c1f3f69d82b9d5e0c4e35 = L.marker(
+                [48.90812110228388, 2.378623187541962],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_f2f479906899a127966d2b7040feca99 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc179c02efc909c8f8d815dba85cf343 = $(`<div id="html_fc179c02efc909c8f8d815dba85cf343" style="width: 100.0%; height: 100.0%;">Félix Faure - Sadi Carnot</div>`)[0];
+                popup_f2f479906899a127966d2b7040feca99.setContent(html_fc179c02efc909c8f8d815dba85cf343);
+            
+        
+
+        marker_97dd0693c89c1f3f69d82b9d5e0c4e35.bindPopup(popup_f2f479906899a127966d2b7040feca99)
+        ;
+
+        
+    
+    
+            var marker_2efc937ea5730fd2c4fbe28b4c3ca16c = L.marker(
+                [48.89876016219984, 2.375325746834278],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_64bd76cb10b4a7f7b0c9f926bacf2ccf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92ed36bb04420b8ee556fc0f2980cc4a = $(`<div id="html_92ed36bb04420b8ee556fc0f2980cc4a" style="width: 100.0%; height: 100.0%;">Square Claude Bernard</div>`)[0];
+                popup_64bd76cb10b4a7f7b0c9f926bacf2ccf.setContent(html_92ed36bb04420b8ee556fc0f2980cc4a);
+            
+        
+
+        marker_2efc937ea5730fd2c4fbe28b4c3ca16c.bindPopup(popup_64bd76cb10b4a7f7b0c9f926bacf2ccf)
+        ;
+
+        
+    
+    
+            var marker_c118acaccf755ae1461bd3ad881b0f2c = L.marker(
+                [48.89490221746837, 2.3648490384221077],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_68494b17668cc5c6467a20d04c91c3de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cffbc0db5674d190e35768113f0f2b65 = $(`<div id="html_cffbc0db5674d190e35768113f0f2b65" style="width: 100.0%; height: 100.0%;">Tristan Tzara -  Tchaïkovski</div>`)[0];
+                popup_68494b17668cc5c6467a20d04c91c3de.setContent(html_cffbc0db5674d190e35768113f0f2b65);
+            
+        
+
+        marker_c118acaccf755ae1461bd3ad881b0f2c.bindPopup(popup_68494b17668cc5c6467a20d04c91c3de)
+        ;
+
+        
+    
+    
+            var marker_80e4697088c527776c17af795e3295bd = L.marker(
+                [48.90808780293388, 2.3665120103670043],
+                {}
+            ).addTo(map_ed9497ad4730f15cc9041ae7ced9c8be);
+        
+    
+        var popup_e58fe648b12b0c7ce8d7abb6fb74f861 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_092cc75e1399a91f7b9bb40b7e27d679 = $(`<div id="html_092cc75e1399a91f7b9bb40b7e27d679" style="width: 100.0%; height: 100.0%;">Vous êtes ici.</div>`)[0];
+                popup_e58fe648b12b0c7ce8d7abb6fb74f861.setContent(html_092cc75e1399a91f7b9bb40b7e27d679);
+            
+        
+
+        marker_80e4697088c527776c17af795e3295bd.bindPopup(popup_e58fe648b12b0c7ce8d7abb6fb74f861)
+        ;
+
+        
+    
+</script>
+</html>
