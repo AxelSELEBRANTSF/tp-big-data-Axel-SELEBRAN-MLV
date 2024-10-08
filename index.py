@@ -12,7 +12,7 @@ def get_ordered_list(points, x, y):
 
 # Function to connect to MongoDB
 def get_database():
-    CONNECTION_STRING = "mongodb://localhost:27018"  # Local MongoDB connection
+    CONNECTION_STRING = "mongodb://localhost:27018"  
     client = MongoClient(CONNECTION_STRING)
     return client["Velib"]
 

@@ -54,27 +54,23 @@ def main() -> None:
             data = get_data(offset)
             if data:
                 set_data(collection, data)
-                # Define map function
+
     map_function = Code("""
     function() {
         emit(this.nom_arrondissement_communes, 1);
     }
     """)
 
-    # Define reduce function
     reduce_function = Code("""
     function(key, values) {
         return Array.sum(values);
     }
     """)
 
-    # Perform map-reduce
     result = collection.map_reduce(map_function, reduce_function, "arrondissement_count")
 
-    # Fetch and sort results
     sorted_results = sorted(result.find(), key=lambda x: x['value'], reverse=True)
 
-    # Print results
     for doc in sorted_results:
         print(f"{doc['_id']}: {doc['value']}")
 
