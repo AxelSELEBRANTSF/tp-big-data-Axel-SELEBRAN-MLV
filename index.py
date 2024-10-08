@@ -18,9 +18,12 @@ def get_database():
 
 # Get the database
 dbName = get_database()
+listNameDB = dbName.list_collection_names()
+strNameDB = listNameDB[-1]
 
 # Query to get all points including coordinates and name fields
-get_list_points = dbName["velib-disponibilite-en-temps-reel"]
+
+get_list_points = dbName[strNameDB]
 list_points = get_list_points.find({}, {"coordonnees_geo": 1, "name": 1})
 
 # Format the points to include lat, lon, and name
