@@ -8,7 +8,7 @@ CENTRAL_POINT = [48.90808780293388, 2.3665120103670043]
 
 def get_database_and_collection():
     """Connect to MongoDB and get the most recent collection."""
-    CONNECTION_STRING = "mongodb://localhost:27018"
+    CONNECTION_STRING = "mongodb://localhost:27017"
     client = MongoClient(CONNECTION_STRING)
     db = client["Velib"]
     

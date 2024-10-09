@@ -25,14 +25,14 @@ Ce projet analyse les données Vélib en utilisant MongoDB et Python pour effect
 
 ### 1. Démarrer MongoDB avec Docker
 
-Lancez MongoDB sur le port 27018 avec Docker en utilisant les commandes suivantes :
+Lancez MongoDB sur le port 27017 avec Docker en utilisant les commandes suivantes :
 
 ```bash
 # Créez un volume Docker pour persister les données
 docker volume create mongodb_data
 
 # Lancez le conteneur MongoDB
-docker run -d -p 27018:27017 --name mongodb \
+docker run -d -p 27017:27017 --name mongodb \
   -v mongodb_data:/data/db \
   mongo:latest
 ```

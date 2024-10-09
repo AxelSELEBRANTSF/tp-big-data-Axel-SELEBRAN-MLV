@@ -1,7 +1,7 @@
 import calendar
+from codecs import Codec
 import time
 from typing import Any, Dict, List, Optional
-from bson import Code
 from pymongo.collection import Collection
 from pymongo import MongoClient
 import requests
@@ -20,7 +20,7 @@ def get_data(offset: int) -> Optional[List[Dict[str, Any]]]:
     return None
 
 def conn() -> tuple[Collection, str]:
-    CONNECTION_STRING = "mongodb://localhost:27018"  
+    CONNECTION_STRING = "mongodb://localhost:27017"  
     client = MongoClient(CONNECTION_STRING)
     current_GMT = time.gmtime()
     ts = calendar.timegm(current_GMT)
@@ -56,13 +56,13 @@ def main() -> None:
             if data:
                 set_data(collection, data)
 
-    map_function = Code("""
+    map_function = Codec("""
     function() {
         emit(this.nom_arrondissement_communes, 1);
     }
     """)
 
-    reduce_function = Code("""
+    reduce_function = Codec("""
     function(key, values) {
         return Array.sum(values);
     }

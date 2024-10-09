@@ -2,12 +2,12 @@ from datetime import datetime, timedelta, timezone
 from pymongo import MongoClient
 
 def cleanup_old_collections() -> None:
-    CONNECTION_STRING = "mongodb://localhost:27018"
+    CONNECTION_STRING = "mongodb://localhost:27017"
     client = MongoClient(CONNECTION_STRING)
     db = client["Velib"]
     
     # Define the time threshold (2 weeks)
-    two_weeks_ago = datetime.now(timezone.utc) - timedelta(weeks=2)
+    two_weeks_ago = datetime.now(timezone.utc) - timedelta(minutes==2)
     
     for collection_name in db.list_collection_names():
         try:
