@@ -1,7 +1,7 @@
 import json
 from pymongo import MongoClient
-import webbrowser
 import folium
+from main import init
 
 # Given point (center of the map)
 CENTRAL_POINT = [48.90808780293388, 2.3665120103670043]
@@ -61,7 +61,7 @@ def main():
         # Connect to the database and get the most recent collection
         db, collection_name = get_database_and_collection()
         collection = db[collection_name]
-        
+        init()
         # Format the points
         formatted_points = format_points(collection)
         
@@ -73,7 +73,6 @@ def main():
         
         # Save and open the map
         map.save("velib_map.html")
-        webbrowser.open("velib_map.html")
         
         print(f"Map created successfully using collection: {collection_name}")
         

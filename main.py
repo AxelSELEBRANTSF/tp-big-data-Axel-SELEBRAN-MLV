@@ -47,7 +47,7 @@ def get_total_count() -> Optional[int]:
         print(f'Other error occurred: {err}')
     return None
 
-def main() -> None:
+def  init() -> None:
     collection, collection_name = conn()
     total_count = get_total_count()
     if total_count is not None:
@@ -56,32 +56,32 @@ def main() -> None:
             if data:
                 set_data(collection, data)
 
-    map_function = Codec("""
-    function() {
-        emit(this.nom_arrondissement_communes, 1);
-    }
-    """)
+    #map_function = Codec("""
+    #function() {
+    #    emit(this.nom_arrondissement_communes, 1);
+    #}
+    #""")
 
-    reduce_function = Codec("""
-    function(key, values) {
-        return Array.sum(values);
-    }
-    """)
+    #reduce_function = Codec("""
+    #function(key, values) {
+    #    return Array.sum(values);
+    #}
+    #""")
 
-    result = collection.database.command(
-        'mapReduce',
-        collection_name,
-        map=map_function,
-        reduce=reduce_function,
-        out={'inline': 1}
-    )
+    #result = collection.database.command(
+     #   'mapReduce',
+      #  collection_name,
+       # map=map_function,
+        #reduce=reduce_function,
+        #out={'inline': 1}
+    #)
 
     # Sort the results
-    sorted_results = sorted(result['results'], key=lambda x: x['value'], reverse=True)
+    #sorted_results = sorted(result['results'], key=lambda x: x['value'], reverse=True)
 
     # Print the results
-    for doc in sorted_results:
-        print(f"Arroundissement: {doc['_id']}, Nombre de vélib disponible: {doc['value']}")
+    #for doc in sorted_results:
+     #   print(f"Arroundissement: {doc['_id']}, Nombre de vélib disponible: {doc['value']}")
 
 if __name__ == "__main__":
-    main()
+    init()
