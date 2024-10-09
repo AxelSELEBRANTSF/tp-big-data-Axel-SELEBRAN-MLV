@@ -19,14 +19,15 @@ def get_data(offset: int) -> Optional[List[Dict[str, Any]]]:
         print(f'Other error occurred: {err}')
     return None
 
-def conn() -> Collection:
+def conn() -> tuple[Collection, str]:
     CONNECTION_STRING = "mongodb://localhost:27018"  
     client = MongoClient(CONNECTION_STRING)
     current_GMT = time.gmtime()
     ts = calendar.timegm(current_GMT)
     db = client["Velib"]
-    collection = db[f"velo_libre_{ts}"]
-    return collection
+    collection_name = f"velo_libre_{ts}"
+    collection = db[collection_name]
+    return collection, collection_name
 
 def set_data(client: Collection, data: List[Dict[str, Any]]) -> None:
     try:
@@ -47,7 +48,7 @@ def get_total_count() -> Optional[int]:
     return None
 
 def main() -> None:
-    collection = conn()
+    collection, collection_name = conn()
     total_count = get_total_count()
     if total_count is not None:
         for offset in range(0, total_count, 100):
@@ -67,12 +68,20 @@ def main() -> None:
     }
     """)
 
-    result = collection.map_reduce(map_function, reduce_function, "arrondissement_count")
+    result = collection.database.command(
+        'mapReduce',
+        collection_name,
+        map=map_function,
+        reduce=reduce_function,
+        out={'inline': 1}
+    )
 
-    sorted_results = sorted(result.find(), key=lambda x: x['value'], reverse=True)
+    # Sort the results
+    sorted_results = sorted(result['results'], key=lambda x: x['value'], reverse=True)
 
+    # Print the results
     for doc in sorted_results:
-        print(f"{doc['_id']}: {doc['value']}")
+        print(f"Arroundissement: {doc['_id']}, Nombre de vélib disponible: {doc['value']}")
 
 if __name__ == "__main__":
     main()

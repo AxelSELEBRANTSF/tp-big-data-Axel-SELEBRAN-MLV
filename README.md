@@ -51,6 +51,13 @@ python main.py
 
 Ce script va se connecter à la base de données MongoDB, effectuer l'opération de map-reduce sur les données Vélib, et afficher les résultats.
 
+
+Par la suite, vous pouvezz lancer le script pour lancer la map avec les quinze points les plus proche:
+
+```bash
+python index.py
+```
+
 ## Arrêt du projet
 
 Pour arrêter le conteneur MongoDB après utilisation :

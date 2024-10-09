@@ -1,5 +1,5 @@
-# Run the data collection script every 5 hours
-*/2 * * * * python /app/main.py >> /var/log/cron.log 2>&1
+# Run the data collection script every 2 minutes
+*/2 * * * * /usr/local/bin/python3 /app/main.py >> /var/log/cron.log 2>&1
 
-# Run the cleanup script daily at midnight
-*/30 * * * * python /app/cleanup_script.py >> /var/log/cron.log 2>&1
+# Run the cleanup script every 30 minutes
+*/30 * * * * /usr/local/bin/python3 /app/cleanup_script.py >> /var/log/cron.log 2>&1
